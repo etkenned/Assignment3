@@ -31,7 +31,6 @@ bool CheckDelimiters( string fileName)
             else
             {
               char temp = array.pop();
-
               if(temp == '(' && line[i] != ')')
               {
                 cout << "Line " << lineNum << ": expected )" << " and found " << line[i] << endl; //alert the user to the location of the problem

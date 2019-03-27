@@ -55,7 +55,8 @@ void GenStack<T>::push(T object)
     array = tempArray;
     size = size * 2;
   }
-  array[top++] = object; //adds object to the stack
+  top++;
+  array[top] = object; //adds object to the stack
 }
 template <class T>
 T GenStack<T>::pop()
@@ -66,7 +67,8 @@ T GenStack<T>::pop()
   }
   else
   {
-    T temp = array[top--];
+    T temp = array[top];
+    top--;
     return temp;
   }
 }
